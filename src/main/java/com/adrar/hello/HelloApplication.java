@@ -8,6 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Scanner;
+
 @SpringBootApplication
 public class HelloApplication implements CommandLineRunner {
     @Autowired
@@ -23,6 +25,29 @@ public class HelloApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println(helloWorldService.getHelloWorld());
-        livreService.add();
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("1. Ajouter un livre");
+            System.out.println("2. Supprimer un livre");
+            System.out.println("3. Afficher la liste des livres");
+            System.out.println("4. Quitter");
+            int choix = scanner.nextInt();
+            switch (choix) {
+                case 1:
+                    livreService.add();
+                    break;
+                case 2:
+                    livreService.remove();
+                    break;
+                case 3:
+                    livreService.findAll();
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Choix invalide");
+            }
+        }
     }
 }

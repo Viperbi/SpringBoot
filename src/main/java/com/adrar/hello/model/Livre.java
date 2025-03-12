@@ -4,14 +4,16 @@ public class Livre {
     private String titre;
     private String description;
     private String datePublication;
+    private String genre;
 
     public Livre() {
     }
 
-    public Livre(String titre, String description, String datePublication) {
+    public Livre(String titre, String description, String datePublication, String genre) {
         this.titre = titre;
         this.description = description;
         this.datePublication = datePublication;
+        this.genre = genre;
     }
 
     public String getTitre() {
@@ -36,6 +38,14 @@ public class Livre {
 
     public void setDatePublication(String datePublication) {
         this.datePublication = datePublication;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     @Override
