@@ -1,6 +1,7 @@
 package com.adrar.hello.service;
 
 import com.adrar.hello.model.Livre;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
