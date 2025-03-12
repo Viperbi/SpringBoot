@@ -12,11 +12,11 @@ public class LivreService {
         Livre livre = new Livre();
         System.out.println("Quel est le titre du livre que voulez vous ajouter ?");
         Scanner scanner = new Scanner(System.in);
-        livre.setTitre(scanner.next());
+        livre.setTitre(scanner.nextLine());
         System.out.println("Quelle est la description du livre que voulez vous ajouter ?");
-        livre.setDescription(scanner.next());
+        livre.setDescription(scanner.nextLine());
         System.out.println("Quelle est la date de publication du livre que voulez vous ajouter ?");
-        livre.setDatePublication(scanner.next());
+        livre.setDatePublication(scanner.nextLine());
         System.out.println(livre.toString());
     }
 
